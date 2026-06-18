@@ -1,0 +1,101 @@
+/* ===== Tema do Mapa de Carreira — Matheus Silveira (grafite) ===== */
+:root {
+  --primary: #0e7490;        /* azul-petróleo */
+  --primary-dark: #134e5e;   /* petróleo escuro */
+  --primary-light: #0891b2;  /* petróleo claro */
+  --accent-soft: #e6f3f6;    /* fundo de badges claras */
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --line: #bfe0e8;
+}
+
+body {
+  background: linear-gradient(135deg, #e9eef0 0%, #d4e6ea 100%);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  padding: 30px 0;
+  min-height: 100vh;
+}
+
+.resume-wrapper { max-width: 1040px; margin: 0 auto; padding: 0 12px; }
+.resume-wrapper-inner { border-radius: 16px; overflow: hidden; }
+
+/* ===== Cabeçalho ===== */
+.resume-header {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+  color: #fff;
+}
+.resume-picture-holder .picture {
+  width: 210px; height: auto; display: block;
+  border: 4px solid rgba(255, 255, 255, 0.22);
+  border-radius: 12px; margin: 1.2rem;
+}
+.picture-fallback {
+  width: 210px; height: 210px;
+  align-items: center; justify-content: center;
+  background: rgba(255, 255, 255, 0.14); color: #fff;
+  font-size: 4rem; font-weight: 800; letter-spacing: 1px;
+}
+.name { font-weight: 800; letter-spacing: 1px; font-size: clamp(1.8rem, 4vw, 2.4rem); }
+.title { font-size: 1.05rem; color: rgba(255, 255, 255, 0.9); font-weight: 500; }
+.text-link { color: rgba(255, 255, 255, 0.9); text-decoration: none; font-size: .95rem; }
+.text-link:hover { color: #fff; text-decoration: underline; }
+.fa-container {
+  display: inline-block; width: 28px; height: 28px; line-height: 28px;
+  background: rgba(255, 255, 255, 0.14); border-radius: 50%;
+}
+
+/* ===== Seções ===== */
+.resume-section-title {
+  color: var(--primary-dark);
+  border-bottom: 2px solid var(--primary-light);
+  font-size: 1.15rem; letter-spacing: .5px;
+}
+.resume-section-content p { color: #374151; }
+
+/* ===== Linha do tempo (roadmap) ===== */
+.resume-timeline-item {
+  padding-left: 2rem; border-left: 2px solid var(--line);
+  margin-left: 1rem; margin-bottom: .5rem;
+}
+.resume-timeline-item::before {
+  content: ""; position: absolute; left: calc(-1px - 6px); top: 4px;
+  width: 14px; height: 14px; background: var(--primary); border-radius: 50%;
+  box-shadow: 0 0 0 3px #fff;
+}
+.resume-position-title { color: var(--ink); font-size: 1.12rem; }
+.resume-timeline-item-desc-heading { font-size: .9rem; color: var(--primary-dark); }
+.resume-timeline-item-desc ul { font-size: .94rem; color: #374151; }
+
+/* Etiqueta de fase */
+.phase-tag {
+  display: inline-block; vertical-align: middle; margin-left: .4rem;
+  font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+  background: var(--primary); color: #fff; padding: .2rem .55rem; border-radius: 50px;
+}
+.phase-tag--soft { background: #dcecef; color: var(--primary-dark); }
+
+/* ===== Badges ===== */
+.skill-badge {
+  background: var(--primary); color: #fff; font-weight: 600;
+  font-size: .8rem; margin: 0 .3rem .45rem 0; padding: .4rem .7rem; border-radius: 6px;
+}
+.tech-badge {
+  background: var(--accent-soft); color: var(--primary-dark); border: 1px solid var(--line);
+  font-weight: 600; font-size: .8rem; margin: 0 .3rem .45rem 0; padding: .4rem .7rem; border-radius: 6px;
+}
+
+/* ===== Skills coluna ===== */
+.resume-skills-cat { color: var(--primary-dark); font-size: .95rem; margin-bottom: .6rem; }
+
+/* ===== Rodapé ===== */
+.resume-footer { background: #f5f6f8; color: var(--muted); border-top: 1px solid #eaedf1; }
+
+/* ===== Botão CV ===== */
+.btn-outline-dark { border-color: var(--primary-dark); color: var(--primary-dark); font-weight: 600; }
+.btn-outline-dark:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+
+@media (max-width: 575px) {
+  body { padding: 0; }
+  .resume-wrapper-inner { border-radius: 0; }
+}
